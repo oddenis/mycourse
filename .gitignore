@@ -1,0 +1,12 @@
+# created by virtualenv automatically
+.idea/
+.venv
+.env
+env/
+venv/
+ENV/
+.build/
+.dist/
+__pycache__/
+target/
+postgresql/
