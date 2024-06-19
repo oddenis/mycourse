@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Course, Lectures, Material
+from .models import Course, Lectures, Material, Category
 # Register your models here.
 
 class LecturesInLine(admin.StackedInline):
@@ -21,3 +21,4 @@ class LecturesAdmin(admin.ModelAdmin):
 
 #admin.site.register(Lectures)
 admin.site.register(Material)
+admin.site.register(Category)

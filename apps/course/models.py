@@ -1,12 +1,21 @@
 from django.conf import settings
 from django.db import models
 
+class Category(models.Model):
+    title = models.CharField(max_length=255)
+
+    def __str__(self):
+        return self.title
+
+
+
 # Create your models here.
 class Course(models.Model):
     title = models.CharField(max_length=255)
     desc = models.TextField()
     image = models.FileField(upload_to='media')
     price = models.IntegerField()
+    category = models.ForeignKey(Category, blank=True, null=True, on_delete=models.SET_NULL, related_name='category_courses')
 
     def __str__(self):
         return self.title
